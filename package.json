@@ -1,0 +1,30 @@
+{
+  "name": "glucotrack",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "dev:mock": "vite --config vite.mock.config.js",
+    "build": "vite build",
+    "preview": "vite preview",
+    "android:sync": "npx cap sync android",
+    "android:run": "JAVA_HOME=\"/Applications/Android Studio.app/Contents/jbr/Contents/Home\" npm run build && JAVA_HOME=\"/Applications/Android Studio.app/Contents/jbr/Contents/Home\" npx cap sync android && JAVA_HOME=\"/Applications/Android Studio.app/Contents/jbr/Contents/Home\" npx cap run android",
+    "android:run:target": "JAVA_HOME=\"/Applications/Android Studio.app/Contents/jbr/Contents/Home\" npx cap run android --target emulator-5554"
+  },
+  "dependencies": {
+    "@capacitor/android": "^8.2.0",
+    "@capacitor/cli": "^8.2.0",
+    "@capacitor/core": "^8.2.0",
+    "@revenuecat/purchases-capacitor": "^12.2.2",
+    "@supabase/supabase-js": "^2.99.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "recharts": "^2.12.7",
+    "xlsx": "^0.18.5"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^4.3.1",
+    "vite": "^5.4.0"
+  }
+}
